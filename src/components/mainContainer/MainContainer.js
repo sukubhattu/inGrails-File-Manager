@@ -145,25 +145,29 @@ class MainContainer extends Component {
           <div className="main-container-header-view float-right">View All</div>
         </div>
         <table className="recent-files-table">
-          <tr>
-            <th>
-              Name <BsArrowUpShort />
-            </th>
-            <th>Members</th>
-            <th>Last Modified</th>
-            <th></th>
-          </tr>
-          <tr>
-            <td>
-              <BsFileZip />
-              React Media Files.zip
-            </td>
-            <td>Only you</td>
-            <td>30 sept, 2019</td>
-            <td>
-              <MdMoreHoriz />
-            </td>
-          </tr>
+          <thead>
+            <tr>
+              <th>
+                Name <BsArrowUpShort />
+              </th>
+              <th>Members</th>
+              <th>Last Modified</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <BsFileZip />
+                React Media Files.zip
+              </td>
+              <td>Only you</td>
+              <td>30 sept, 2019</td>
+              <td>
+                <MdMoreHoriz />
+              </td>
+            </tr>
+          </tbody>
         </table>
         {/* Recent Files ends here */}
       </div>
