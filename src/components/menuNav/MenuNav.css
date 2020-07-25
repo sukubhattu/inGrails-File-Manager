@@ -1,0 +1,7 @@
+.menu-nav ul {
+  list-style: none;
+}
+.user-img-lg {
+  border-radius: 50%;
+  border: 2px solid white;
+}
