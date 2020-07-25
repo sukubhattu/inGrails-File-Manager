@@ -34,7 +34,7 @@ class Storage extends Component {
         <div className="storage-category">
           <div className="storage-category-row">
             <div className="storage-category-icon">
-              <img className="" src={image1} alt="image" />
+              <img className="" src={image1} alt="storage icon" />
             </div>
             <div className="storage-category-name">
               <p className="storage-category-name-head">Images</p>
@@ -45,7 +45,7 @@ class Storage extends Component {
 
           <div className="storage-category-row">
             <div className="storage-category-icon">
-              <img className="" src={document1} alt="image" />
+              <img className="" src={document1} alt="storage icon" />
             </div>
             <div className="storage-category-name">
               <p className="storage-category-name-head">Documents</p>
@@ -56,7 +56,7 @@ class Storage extends Component {
 
           <div className="storage-category-row">
             <div className="storage-category-icon">
-              <img className="" src={media1} alt="image" />
+              <img className="" src={media1} alt="storage icon" />
             </div>
             <div className="storage-category-name">
               <p className="storage-category-name-head">Media</p>
@@ -67,7 +67,7 @@ class Storage extends Component {
 
           <div className="storage-category-row">
             <div className="storage-category-icon">
-              <img className="" src={other1} alt="image" />
+              <img className="" src={other1} alt="storage icon" />
             </div>
             <div className="storage-category-name">
               <p className="storage-category-name-head">Other Files</p>
@@ -78,7 +78,7 @@ class Storage extends Component {
 
           <div className="storage-category-row">
             <div className="storage-category-icon">
-              <img className="" src={Unknown1} alt="image" />
+              <img className="" src={Unknown1} alt="storage icon" />
             </div>
             <div className="storage-category-name">
               <p className="storage-category-name-head">Unknown Files</p>
@@ -89,7 +89,7 @@ class Storage extends Component {
         </div>
 
         <div className="storage-upgrade">
-          <img className="" src={upgrade1} alt="image" />
+          <img className="" src={upgrade1} alt="storage icon" />
           <h3>Upgrade Account!</h3>
           <p>5 integration, 30 team members, advanced features for teams</p>
           <button>Upgrade</button>
