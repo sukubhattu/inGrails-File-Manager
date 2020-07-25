@@ -1,3 +1,6 @@
+body {
+  background-color: #eff0fa;
+}
 .float-left {
   float: left;
 }
