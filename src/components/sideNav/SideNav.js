@@ -8,12 +8,11 @@ import { RiArrowDropDownLine, RiSlideshow4Line } from "react-icons/ri";
 import { IoMdFolderOpen } from "react-icons/io";
 import {
   AiOutlineFileText,
-  AiOutlinePlus,
   AiOutlineRight,
   AiFillCaretRight,
   AiFillFolder,
 } from "react-icons/ai";
-import { BsFileSpreadsheet } from "react-icons/bs";
+import { BsFileSpreadsheet, BsPlus } from "react-icons/bs";
 import { FiMoreHorizontal } from "react-icons/fi";
 
 /* Leaving as stateful or class components
@@ -141,7 +140,7 @@ class SideNav extends Component {
         <div className="create-new-button">
           Create new
           <i className="create-new-button-plus">
-            <AiOutlinePlus />
+            <BsPlus />
           </i>
         </div>
       </div>
