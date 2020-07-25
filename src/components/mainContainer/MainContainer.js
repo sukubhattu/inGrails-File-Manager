@@ -3,12 +3,18 @@ import React, { Component } from "react";
 // Import CSS
 import "./MainContainer.css";
 
+// import Image
+import googleDrive from "./img/google-drive.png";
+import oneDrive from "./img/onedrive.png";
+import dropBox from "./img/dropbox.png";
+import pdfIcon from "./img/pdf.png";
+import zipIcon from "./img/zip-format.png";
+import docIcon from "./img/google-docs.png";
+
 // Import icons
-import { FaGoogleDrive, FaDropbox } from "react-icons/fa";
-import { GrOnedrive } from "react-icons/gr";
 import { MdMoreHoriz } from "react-icons/md";
-import { BsArrowUpShort, BsFileZip } from "react-icons/bs";
-import { FcFolder } from "react-icons/fc";
+import { BsArrowUpShort } from "react-icons/bs";
+import { FaFolder } from "react-icons/fa";
 
 /* Leaving as stateful or class components
   Initially this code is just UI component.
@@ -31,16 +37,18 @@ class MainContainer extends Component {
         {/* search bar ends here */}
 
         {/* cloud storage card starts here */}
-        <div className="cloud-storage">
+        <div className="card">
           <div className="cloud-storage-card">
-            <div className="cloud-storage-name cleafix">
+            <div className="cloud-storage-name clearfix">
               <div className="cloud-storage-name-info float-left">
-                <FaGoogleDrive />
+                <img src={googleDrive} alt="One Drive" />
                 <br />
-                Google Drive
+                One Drive
               </div>
-              <div className="cloud-storage-name-value float-right">
-                <MdMoreHoriz />
+              <div className="float-right">
+                <i className="cloud-storage-name-value">
+                  <MdMoreHoriz size={24} />
+                </i>
               </div>
             </div>
             <div className="cloud-storage-amount clearfix">
@@ -49,17 +57,19 @@ class MainContainer extends Component {
                 50 GB
               </div>
             </div>
-            <div className="storage-progress-bar"></div>
+            <div className="storage-progress-bar-individual"></div>
           </div>
           <div className="cloud-storage-card second-card">
             <div className="cloud-storage-name clearfix">
               <div className="cloud-storage-name-info float-left">
-                <FaDropbox />
+                <img src={dropBox} alt="Drop Box" />
                 <br />
                 Dropbox
               </div>
-              <div className="cloud-storage-name-value float-right">
-                <MdMoreHoriz />
+              <div className="float-right">
+                <i className="cloud-storage-name-value">
+                  <MdMoreHoriz size={24} />
+                </i>
               </div>
             </div>
             <div className="cloud-storage-amount clearfix">
@@ -68,17 +78,19 @@ class MainContainer extends Component {
                 50 GB
               </div>
             </div>
-            <div className="storage-progress-bar"></div>
+            <div className="storage-progress-bar-individual"></div>
           </div>
           <div className="cloud-storage-card">
             <div className="cloud-storage-name clearfix">
               <div className="cloud-storage-name-info float-left">
-                <GrOnedrive />
+                <img src={oneDrive} alt="One Drive" />
                 <br />
                 One Drive
               </div>
-              <div className="cloud-storage-name-value float-right">
-                <MdMoreHoriz />
+              <div className="float-right">
+                <i className="cloud-storage-name-value">
+                  <MdMoreHoriz size={24} />
+                </i>
               </div>
             </div>
             <div className="cloud-storage-amount clearfix">
@@ -87,7 +99,7 @@ class MainContainer extends Component {
                 50 GB
               </div>
             </div>
-            <div className="storage-progress-bar"></div>
+            <div className="storage-progress-bar-individual"></div>
           </div>
         </div>
         {/* cloud storage card ends here */}
@@ -97,11 +109,13 @@ class MainContainer extends Component {
           <div className="main-container-header-name float-left">Folders</div>
           <div className="main-container-header-view float-right">View All</div>
         </div>
-        <div className="shared-folder">
+        <div className="card">
           <div className="shared-folder-card">
-            <div className="shared-folder-card-info clearfix">
-              <div className="shared-folder-card-info-name float-left">
-                <FcFolder />
+            <div className=" clearfix">
+              <div className="float-left">
+                <i className="shared-folder-card-info-name">
+                  <FaFolder size={32} />
+                </i>
                 <br />
                 Analytics
                 <br />
@@ -111,25 +125,29 @@ class MainContainer extends Component {
             </div>
           </div>
           <div className="shared-folder-card second-card">
-            <div className="shared-folder-card-info clearfix">
-              <div className="shared-folder-card-info-name float-left">
-                <FcFolder />
+            <div className=" clearfix">
+              <div className="float-left">
+                <i className="shared-folder-card-info-name">
+                  <FaFolder size={32} />
+                </i>
                 <br />
-                Analytics
+                Assets
                 <br />
-                15 Files
+                345 Files
               </div>
               <div className="shared-folder-card-info-people float-right"></div>
             </div>
           </div>
           <div className="shared-folder-card">
-            <div className="shared-folder-card-info clearfix">
-              <div className="shared-folder-card-info-name float-left">
-                <FcFolder />
+            <div className=" clearfix">
+              <div className="float-left">
+                <i className="shared-folder-card-info-name">
+                  <FaFolder size={32} />
+                </i>
                 <br />
-                Analytics
+                Marketing
                 <br />
-                15 Files
+                143 Files
               </div>
               <div className="shared-folder-card-info-people float-right"></div>
             </div>
@@ -158,7 +176,29 @@ class MainContainer extends Component {
           <tbody>
             <tr>
               <td>
-                <BsFileZip />
+                <img className="file-icon" src={zipIcon} alt="file icon" />
+                React Media Files.zip
+              </td>
+              <td>Only you</td>
+              <td>30 sept, 2019</td>
+              <td>
+                <MdMoreHoriz />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img className="file-icon" src={docIcon} alt="file icon" />
+                React Media Files.zip
+              </td>
+              <td>Only you</td>
+              <td>30 sept, 2019</td>
+              <td>
+                <MdMoreHoriz />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img className="file-icon" src={pdfIcon} alt="file icon" />
                 React Media Files.zip
               </td>
               <td>Only you</td>
