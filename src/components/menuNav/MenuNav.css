@@ -1,5 +1,30 @@
-.menu-nav ul {
+.menu-nav-logo {
+  margin-top: 12px;
+  text-align: center;
+}
+.menu-nav-logo-img {
+  width: 40px;
+}
+
+.menu-nav-icons {
+  margin-top: 40px;
   list-style: none;
+}
+
+.menu-nav-icons li {
+  padding: 15px 0px;
+  text-align: center;
+  color: white;
+}
+.menu-nav-icons li:hover {
+  background-color: #6973ff;
+  border-left: 2px solid white;
+}
+.menu-nav-icons li a {
+  color: white;
+}
+.user-image {
+  text-align: center;
 }
 .user-img-lg {
   border-radius: 50%;

@@ -3,6 +3,9 @@ import React, { Component } from "react";
 // Importing CSS
 import "./MenuNav.css";
 
+// Import Image
+import logo from "./img/logo.png";
+
 // importing icons
 import { FaHorseHead } from "react-icons/fa";
 import { MdContentCopy } from "react-icons/md";
@@ -18,25 +21,38 @@ class MenuNav extends Component {
   render() {
     return (
       <div className="menu-nav">
-        <FaHorseHead />
-        <ul>
+        <div className="menu-nav-logo">
+          <img className="menu-nav-logo-img" src={logo} alt="user" />
+        </div>
+
+        <ul className="menu-nav-icons">
           <li>
-            <MdContentCopy />
+            <a href="#" title="Copy">
+              <MdContentCopy size={24} />
+            </a>
           </li>
           <li>
-            <FiMessageSquare />
+            <a href="#" title="Messages">
+              <FiMessageSquare size={24} />
+            </a>
           </li>
           <li>
-            <AiOutlineUser />
+            <a href="#" title="Group">
+              <AiOutlineUser size={24} />
+            </a>
           </li>
           <li>
-            <RiFileChartLine />
+            <a href="#" title="Chart">
+              <RiFileChartLine size={24} />
+            </a>
           </li>
           <li>
-            <AiFillSetting />
+            <a href="#" title="Setting">
+              <AiFillSetting size={24} />
+            </a>
           </li>
         </ul>
-        <div>
+        <div className="user-image">
           <img
             className="user-img-lg"
             src="https://picsum.photos/40/40"
