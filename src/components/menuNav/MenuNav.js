@@ -7,7 +7,6 @@ import "./MenuNav.css";
 import logo from "./img/logo.png";
 
 // importing icons
-import { FaHorseHead } from "react-icons/fa";
 import { MdContentCopy } from "react-icons/md";
 import { FiMessageSquare } from "react-icons/fi";
 import { AiOutlineUser, AiFillSetting } from "react-icons/ai";
