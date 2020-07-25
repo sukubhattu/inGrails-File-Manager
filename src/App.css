@@ -1,0 +1,28 @@
+.App {
+  max-width: 1000px;
+  margin: 2px auto;
+}
+.main-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+.menu-nav-wrapper {
+  width: 7%;
+  padding: 0px 10px;
+  background-color: blue;
+}
+.side-nav-wrapper {
+  width: 20%;
+  padding: 0px 10px;
+  background-color: white;
+}
+.main-container-wrapper {
+  width: 53%;
+  padding: 0px 10px;
+  background-color: grey;
+}
+.storage-wrapper {
+  width: 20%;
+  padding: 0px 10px;
+  background-color: white;
+}
