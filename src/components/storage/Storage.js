@@ -3,6 +3,14 @@ import React, { Component } from "react";
 // Import css
 import "./Storage.css";
 
+// import image
+import document1 from "./img/document.png";
+import image1 from "./img/image.png";
+import media1 from "./img/media.png";
+import other1 from "./img/other.png";
+import Unknown1 from "./img/unknown.png";
+import upgrade1 from "./img/upgrade.png";
+
 /* Leaving as stateful or class components
   Initially this code is just UI component.
   Further it can be changed
@@ -12,83 +20,78 @@ class Storage extends Component {
     return (
       <div className="storage">
         <div className="storage-amount">
-          <div className="used">
-            42GB <br />
-            Used
+          <div className="storage-used">
+            <h2>45.5 GB</h2>
+            <p>Used</p>
           </div>
-          <div className="total">
-            50GB
-            <br />
-            Upgrade
+          <div className="storage-total">
+            <h2>50 GB</h2>
+            <p>Upgrade</p>
           </div>
         </div>
 
         <div className="storage-progress-bar"></div>
+        <div className="storage-category">
+          <div className="storage-category-row">
+            <div className="storage-category-icon">
+              <img className="" src={image1} alt="image" />
+            </div>
+            <div className="storage-category-name">
+              <p className="storage-category-name-head">Images</p>
+              <p className="storage-category-name-sub">1,756 files</p>
+            </div>
+            <div className="storage-category-amount">15 GB</div>
+          </div>
 
-        <div className="storage-category-row">
-          <div className="storage-category-icon">
-            <img className="" src="https://picsum.photos/40/40" alt="image" />
+          <div className="storage-category-row">
+            <div className="storage-category-icon">
+              <img className="" src={document1} alt="image" />
+            </div>
+            <div className="storage-category-name">
+              <p className="storage-category-name-head">Documents</p>
+              <p className="storage-category-name-sub">756 files</p>
+            </div>
+            <div className="storage-category-amount">256 MB</div>
           </div>
-          <div className="storage-category-name">
-            Images <br />
-            1,500 files
-          </div>
-          <div className="storage-category-amount">15 GB</div>
-        </div>
 
-        <div className="storage-category-row">
-          <div className="storage-category-icon">
-            <img className="" src="https://picsum.photos/40/40" alt="image" />
+          <div className="storage-category-row">
+            <div className="storage-category-icon">
+              <img className="" src={media1} alt="image" />
+            </div>
+            <div className="storage-category-name">
+              <p className="storage-category-name-head">Media</p>
+              <p className="storage-category-name-sub">200 files</p>
+            </div>
+            <div className="storage-category-amount">15 GB</div>
           </div>
-          <div className="storage-category-name">
-            Documents
-            <br />
-            1,500 files
-          </div>
-          <div className="storage-category-amount">15 GB</div>
-        </div>
 
-        <div className="storage-category-row">
-          <div className="storage-category-icon">
-            <img className="" src="https://picsum.photos/40/40" alt="image" />
+          <div className="storage-category-row">
+            <div className="storage-category-icon">
+              <img className="" src={other1} alt="image" />
+            </div>
+            <div className="storage-category-name">
+              <p className="storage-category-name-head">Other Files</p>
+              <p className="storage-category-name-sub">1,756 files</p>
+            </div>
+            <div className="storage-category-amount">15 GB</div>
           </div>
-          <div className="storage-category-name">
-            Media
-            <br />
-            1,500 files
-          </div>
-          <div className="storage-category-amount">15 GB</div>
-        </div>
 
-        <div className="storage-category-row">
-          <div className="storage-category-icon">
-            <img className="" src="https://picsum.photos/40/40" alt="image" />
+          <div className="storage-category-row">
+            <div className="storage-category-icon">
+              <img className="" src={Unknown1} alt="image" />
+            </div>
+            <div className="storage-category-name">
+              <p className="storage-category-name-head">Unknown Files</p>
+              <p className="storage-category-name-sub">1,756 files</p>
+            </div>
+            <div className="storage-category-amount">15 GB</div>
           </div>
-          <div className="storage-category-name">
-            Other Files
-            <br />
-            1,500 files
-          </div>
-          <div className="storage-category-amount">15 GB</div>
-        </div>
-
-        <div className="storage-category-row">
-          <div className="storage-category-icon">
-            <img className="" src="https://picsum.photos/40/40" alt="image" />
-          </div>
-          <div className="storage-category-name">
-            Unknown Files
-            <br />
-            1,500 files
-          </div>
-          <div className="storage-category-amount">15 GB</div>
         </div>
 
         <div className="storage-upgrade">
-          <img className="" src="https://picsum.photos/200/200" alt="image" />
-          Upgrade Account!
-          <br />5 integration, 30 team members, advanced features for teams
-          <br />
+          <img className="" src={upgrade1} alt="image" />
+          <h3>Upgrade Account!</h3>
+          <p>5 integration, 30 team members, advanced features for teams</p>
           <button>Upgrade</button>
         </div>
       </div>
