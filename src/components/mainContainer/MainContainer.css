@@ -7,7 +7,7 @@
   width: 100%;
 }
 
-.myFolderViewAllClass {
+.my-folder-view-all {
   margin-top: 20px;
 }
 
@@ -68,27 +68,31 @@ input {
   color: #5864ff;
 }
 .main-container-header {
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 20px;
+  padding: 20px 20px 0px 20px;
 }
-.recent-files-table {
-  padding: 0px 20px;
-  table-layout: auto;
-  width: 100%;
-}
+
 .file-icon {
   height: 32px;
   margin-right: 5px;
   vertical-align: middle;
 }
-
+.recent-files-table {
+  table-layout: auto;
+  width: 100%;
+  border-collapse: collapse;
+}
 .recent-files-table th {
+  padding: 10px 20px;
   text-align: left;
 }
 
 .recent-files-table td {
-  padding-top: 20px;
+  padding: 10px 20px;
+}
+
+.recent-files-table tbody tr:hover td {
+  cursor: pointer;
+  background-color: #ffffff;
 }
 
 .storage-progress-bar-individual {
@@ -97,4 +101,13 @@ input {
   position: relative;
   background-color: #f0f4fc;
   border-radius: 5px;
+}
+
+.folder-view-all {
+  border: none;
+  outline: none;
+}
+
+.folder-view-all:hover {
+  cursor: pointer;
 }

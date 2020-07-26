@@ -17,7 +17,7 @@ import { BsArrowUpShort } from "react-icons/bs";
 import { FaFolder } from "react-icons/fa";
 
 const folderTemplate = (
-  <div className="myFolderViewAllClass">
+  <div className="my-folder-view-all">
     <div className="card">
       <div className="shared-folder-card">
         <div className="clearfix">
@@ -164,7 +164,13 @@ class MainContainer extends Component {
         <div className="main-container-header clearfix">
           <div className="main-container-header-name float-left">Folders</div>
           <div className="main-container-header-view float-right">
-            <button onClick={this.toggleShowFolder}>View All</button>
+            <a
+              href="#"
+              className="folder-view-all"
+              onClick={this.toggleShowFolder}
+            >
+              View All
+            </a>
           </div>
         </div>
 
