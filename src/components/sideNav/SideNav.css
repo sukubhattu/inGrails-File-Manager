@@ -11,19 +11,26 @@
   color: #bdbdce;
 }
 .side-nav h2 {
-  margin-left: 20px;
+  margin: 20px 0px 10px 20px;
 }
 
 .file-types {
   list-style: none;
   margin-left: 20px;
 }
-.file-types li {
-  padding-top: 5px;
+.file-types h4 {
+  color: #6570f7;
+}
+.file-types-head {
+  padding: 10px 0px;
 }
 .file-types-sub {
   margin-left: 15px;
   list-style: none;
+}
+.file-types-sub li {
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 .file-types-sub1 {
   color: #7780af;
@@ -47,6 +54,9 @@
 }
 .create-new li {
   padding: 5px 5px;
+}
+.create-new li:hover {
+  cursor: pointer;
 }
 .create-new-item {
   vertical-align: sub;
@@ -76,6 +86,7 @@
 }
 
 .create-new-button:hover {
+  cursor: pointer;
   border: 1px solid #5864ff;
   color: #5864ff;
   background-color: #ffffff;

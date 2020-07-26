@@ -86,10 +86,10 @@ function SideNav() {
             </li>
           </ul>
         </li>
-        <li>Shared with me</li>
-        <li>Recent</li>
-        <li>Starred</li>
-        <li>Trash</li>
+        <li className="file-types-head">Shared with me</li>
+        <li className="file-types-head">Recent</li>
+        <li className="file-types-head">Starred</li>
+        <li className="file-types-head">Trash</li>
       </ul>
       {/* for create new items */}
       <ul className="create-new">
