@@ -8,8 +8,7 @@ import "./css/reset.css";
 import "./css/style.css";
 
 // Importing Fonts
-// import "./fonts/QaneleasLight.otf";
-// import "./fonts/QaneleasBold.otf";
+import "./fonts/SFPro.ttf";
 
 // Importing components
 import MenuNav from "./components/menuNav/MenuNav";
