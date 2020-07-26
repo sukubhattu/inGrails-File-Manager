@@ -1,0 +1,93 @@
+.drive-team {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #f2f3f8;
+}
+.drive-team-name {
+  padding-left: 20px;
+}
+.drive-team-down-icon {
+  padding-right: 20px;
+  color: #bdbdce;
+}
+.side-nav h2 {
+  margin: 20px 0px 10px 20px;
+}
+
+.file-types {
+  list-style: none;
+  margin-left: 20px;
+}
+.file-types h4 {
+  color: #6570f7;
+}
+.file-types-head {
+  padding: 10px 0px;
+}
+.file-types-sub {
+  margin-left: 15px;
+  list-style: none;
+}
+.file-types-sub li {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.file-types-sub1 {
+  color: #7780af;
+  vertical-align: sub;
+}
+.file-types-sub2 {
+  color: #aaafcd;
+  vertical-align: sub;
+  margin-right: 5px;
+}
+.create-new {
+  list-style: none;
+  border-radius: 5px;
+  background-color: #f6f8fb;
+  margin-top: 140px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.create-new li:first-child {
+  border-bottom: 2px solid #e7eafa;
+}
+.create-new li {
+  padding: 5px 5px;
+}
+.create-new li:hover {
+  cursor: pointer;
+}
+.create-new-item {
+  vertical-align: sub;
+  color: #6570f7;
+  margin-right: 15px;
+}
+.create-new-item-go {
+  float: right;
+  vertical-align: bottom;
+  color: #afb5d1;
+}
+.create-new-button {
+  margin-top: 10px;
+  background-color: #5864ff;
+  color: #ffffff;
+  padding: 15px 10px 15px 30px;
+  border-radius: 5px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.create-new-button-plus {
+  border-radius: 5px;
+  padding: 2px 5px;
+  background-color: #7983ff;
+  float: right;
+  color: #ffffff;
+}
+
+.create-new-button:hover {
+  cursor: pointer;
+  border: 1px solid #5864ff;
+  color: #5864ff;
+  background-color: #ffffff;
+}

@@ -1,0 +1,16 @@
+body {
+  background-color: #eff0fa;
+  color: #0e1c71;
+  font-family: SFPro;
+}
+.float-left {
+  float: left;
+}
+.float-right {
+  float: right;
+}
+.clearfix::after {
+  display: table;
+  clear: both;
+  content: "";
+}

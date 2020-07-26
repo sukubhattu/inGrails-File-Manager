@@ -1,0 +1,29 @@
+@font-face {
+  font-family: "SFPro";
+  src: local("SFPro"), url(./fonts/SFPro.ttf) format("truetype");
+}
+.App {
+  max-width: 1200px;
+  margin: 2px auto;
+}
+.main-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+.menu-nav-wrapper {
+  width: 7%;
+  background-color: #5864ff;
+}
+.side-nav-wrapper {
+  width: 20%;
+  background-color: white;
+  border-right: 2px solid #f2f3f8;
+}
+.main-container-wrapper {
+  width: 50%;
+  background-color: #f6f8fb;
+}
+.storage-wrapper {
+  width: 23%;
+  background-color: white;
+}
