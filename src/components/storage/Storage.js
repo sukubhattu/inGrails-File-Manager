@@ -29,7 +29,13 @@ function Storage() {
         </div>
       </div>
 
-      <div className="storage-progress-bar"></div>
+      <div className="storage-progress-bar">
+        <div className="storage-progress-bar-inner1">
+          <div className="storage-progress-bar-inner2">
+            <div className="storage-progress-bar-inner3"></div>
+          </div>
+        </div>
+      </div>
       <div className="storage-category">
         <div className="storage-category-row">
           <div className="storage-category-icon">
@@ -89,7 +95,7 @@ function Storage() {
 
       <div className="storage-upgrade">
         <img className="" src={upgrade1} alt="storage icon" />
-        <h3>Upgrade Account!</h3>
+        <h2>Upgrade Account!</h2>
         <p>5 integration, 30 team members, advanced features for teams</p>
         <button>Upgrade</button>
       </div>
