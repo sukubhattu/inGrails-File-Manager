@@ -4,4 +4,5 @@
 
 > **Note**  
 > this is just minimal design, all the links design has not been covered.
-> The basic requirements mentioned to me has been fulfilled.
+> The basic requirements mentioned to me has been fulfilled (I guess).
+> **Any kind of feedback is appreciated **
