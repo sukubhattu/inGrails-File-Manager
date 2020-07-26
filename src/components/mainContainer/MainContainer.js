@@ -3,6 +3,9 @@ import React, { Component } from "react";
 // Import CSS
 import "./MainContainer.css";
 
+// Import router
+import { BrowserRouter as Router, Link } from "react-router-dom";
+
 // import Image
 import googleDrive from "./img/google-drive.png";
 import oneDrive from "./img/onedrive.png";
@@ -13,7 +16,7 @@ import docIcon from "./img/doc.png";
 
 // Import icons
 import { MdMoreHoriz } from "react-icons/md";
-import { BsArrowUpShort } from "react-icons/bs";
+import { AiOutlineArrowUp } from "react-icons/ai";
 import { FaFolder } from "react-icons/fa";
 
 const folderTemplate = (
@@ -25,10 +28,8 @@ const folderTemplate = (
             <i className="shared-folder-card-info-name">
               <FaFolder size={32} />
             </i>
-            <br />
-            Analytics
-            <br />
-            15 Files
+            <h4>Analytics</h4>
+            <p>15 Files</p>
           </div>
           <div className="shared-folder-card-info-people float-right"></div>
         </div>
@@ -39,10 +40,8 @@ const folderTemplate = (
             <i className="shared-folder-card-info-name">
               <FaFolder size={32} />
             </i>
-            <br />
-            Assets
-            <br />
-            345 Files
+            <h4>Assets</h4>
+            <p>345 Files</p>
           </div>
           <div className="shared-folder-card-info-people float-right"></div>
         </div>
@@ -53,10 +52,8 @@ const folderTemplate = (
             <i className="shared-folder-card-info-name">
               <FaFolder size={32} />
             </i>
-            <br />
-            Marketing
-            <br />
-            143 Files
+            <h4>Marketing</h4>
+            <p>143 Files</p>
           </div>
           <div className="shared-folder-card-info-people float-right"></div>
         </div>
@@ -80,166 +77,195 @@ class MainContainer extends Component {
   render() {
     return (
       <div className="main-container">
-        {/* Search bar starts here */}
-        <div className="main-container-search">
-          <form action="#" className="main-container-search-form">
-            <input
-              type="text"
-              className="form-input search-input"
-              placeholder="Search the file"
-            />
-          </form>
-        </div>
-        {/* search bar ends here */}
+        <Router>
+          {/* Search bar starts here */}
+          <div className="main-container-search">
+            <form action="#" className="main-container-search-form">
+              <input
+                type="text"
+                className="form-input search-input"
+                placeholder="Search the file"
+              />
+            </form>
+          </div>
+          {/* search bar ends here */}
 
-        {/* cloud storage card starts here */}
-        <div className="card">
-          <div className="cloud-storage-card">
-            <div className="cloud-storage-name clearfix">
-              <div className="cloud-storage-name-info float-left">
-                <img src={googleDrive} alt="One Drive" />
-                <br />
-                One Drive
+          {/* cloud storage card starts here */}
+          <div className="card">
+            <div className="cloud-storage-card">
+              <div className="cloud-storage-name clearfix">
+                <div className="float-left">
+                  <img src={googleDrive} alt="Google Drive" />
+                  <br />
+                  <h4> Google Drive</h4>
+                </div>
+                <div className="float-right">
+                  <i className="cloud-storage-name-value">
+                    <MdMoreHoriz size={24} />
+                  </i>
+                </div>
               </div>
-              <div className="float-right">
-                <i className="cloud-storage-name-value">
-                  <MdMoreHoriz size={24} />
-                </i>
+              <div className="cloud-storage-amount clearfix">
+                <div className="cloud-storage-amount-used float-left">
+                  45 GB
+                </div>
+                <div className="cloud-storage-amount-total float-right">
+                  50 GB
+                </div>
+              </div>
+              <div className="storage-progress-bar-individual">
+                <div className="storage-progress-bar-individual1"></div>
               </div>
             </div>
-            <div className="cloud-storage-amount clearfix">
-              <div className="cloud-storage-amount-used float-left">45 GB</div>
-              <div className="cloud-storage-amount-total float-right">
-                50 GB
+            <div className="cloud-storage-card second-card">
+              <div className="cloud-storage-name clearfix">
+                <div className="float-left">
+                  <img src={dropBox} alt="Drop Box" />
+                  <br />
+                  <h4>Dropbox</h4>
+                </div>
+                <div className="float-right">
+                  <i className="cloud-storage-name-value">
+                    <MdMoreHoriz size={24} />
+                  </i>
+                </div>
+              </div>
+              <div className="cloud-storage-amount clearfix">
+                <div className="cloud-storage-amount-used float-left">
+                  45 GB
+                </div>
+                <div className="cloud-storage-amount-total float-right">
+                  50 GB
+                </div>
+              </div>
+              <div className="storage-progress-bar-individual">
+                <div className="storage-progress-bar-individual1"></div>
               </div>
             </div>
-            <div className="storage-progress-bar-individual"></div>
+            <div className="cloud-storage-card">
+              <div className="cloud-storage-name clearfix">
+                <div className="float-left">
+                  <img src={oneDrive} alt="One Drive" />
+                  <br />
+                  <h4>One Drive</h4>
+                </div>
+                <div className="float-right">
+                  <i className="cloud-storage-name-value">
+                    <MdMoreHoriz size={24} />
+                  </i>
+                </div>
+              </div>
+              <div className="cloud-storage-amount clearfix">
+                <div className="cloud-storage-amount-used float-left">
+                  45 GB
+                </div>
+                <div className="cloud-storage-amount-total float-right">
+                  50 GB
+                </div>
+              </div>
+              <div className="storage-progress-bar-individual">
+                <div className="storage-progress-bar-individual1"></div>
+              </div>
+            </div>
           </div>
-          <div className="cloud-storage-card second-card">
-            <div className="cloud-storage-name clearfix">
-              <div className="cloud-storage-name-info float-left">
-                <img src={dropBox} alt="Drop Box" />
-                <br />
-                Dropbox
-              </div>
-              <div className="float-right">
-                <i className="cloud-storage-name-value">
-                  <MdMoreHoriz size={24} />
-                </i>
-              </div>
-            </div>
-            <div className="cloud-storage-amount clearfix">
-              <div className="cloud-storage-amount-used float-left">45 GB</div>
-              <div className="cloud-storage-amount-total float-right">
-                50 GB
-              </div>
-            </div>
-            <div className="storage-progress-bar-individual"></div>
-          </div>
-          <div className="cloud-storage-card">
-            <div className="cloud-storage-name clearfix">
-              <div className="cloud-storage-name-info float-left">
-                <img src={oneDrive} alt="One Drive" />
-                <br />
-                One Drive
-              </div>
-              <div className="float-right">
-                <i className="cloud-storage-name-value">
-                  <MdMoreHoriz size={24} />
-                </i>
-              </div>
-            </div>
-            <div className="cloud-storage-amount clearfix">
-              <div className="cloud-storage-amount-used float-left">45 GB</div>
-              <div className="cloud-storage-amount-total float-right">
-                50 GB
-              </div>
-            </div>
-            <div className="storage-progress-bar-individual"></div>
-          </div>
-        </div>
-        {/* cloud storage card ends here */}
+          {/* cloud storage card ends here */}
 
-        {/* Folder Starts Here */}
-        <div className="main-container-header clearfix">
-          <div className="main-container-header-name float-left">Folders</div>
-          <div className="main-container-header-view float-right">
-            <a
-              href="#"
-              className="folder-view-all"
-              onClick={this.toggleShowFolder}
-            >
-              View All
-            </a>
-          </div>
-        </div>
-
-        {folderTemplate}
-        {/* Folder ends here */}
-
-        {/* Recent Files start here */}
-        {!this.state.showingFolder ? (
-          <div>
-            <div className="main-container-header clearfix">
-              <div className="main-container-header-name float-left">
-                Recent Files
-              </div>
-              <div className="main-container-header-view float-right">
-                View All
-              </div>
+          {/* Folder Starts Here */}
+          <div className="main-container-header clearfix">
+            <div className="main-container-header-name float-left">
+              <h2>Folders</h2>
             </div>
-            <table className="recent-files-table">
-              <thead>
-                <tr>
-                  <th>
-                    Name <BsArrowUpShort />
-                  </th>
-                  <th>Members</th>
-                  <th>Last Modified</th>
-                  <th></th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>
-                    <img className="file-icon" src={zipIcon} alt="file icon" />
-                    React Media Files.zip
-                  </td>
-                  <td>Only you</td>
-                  <td>30 sept, 2019</td>
-                  <td>
-                    <MdMoreHoriz />
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <img className="file-icon" src={docIcon} alt="file icon" />
-                    React Media Files.zip
-                  </td>
-                  <td>Only you</td>
-                  <td>30 sept, 2019</td>
-                  <td>
-                    <MdMoreHoriz />
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <img className="file-icon" src={pdfIcon} alt="file icon" />
-                    React Media Files.zip
-                  </td>
-                  <td>Only you</td>
-                  <td>30 sept, 2019</td>
-                  <td>
-                    <MdMoreHoriz />
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-            {/* Recent Files ends here */}
+            <div className="main-container-header-view float-right">
+              <Link
+                to="#"
+                className="folder-view-all"
+                onClick={this.toggleShowFolder}
+              >
+                {this.state.showingFolder ? "Hide All" : "View All"}
+              </Link>
+            </div>
           </div>
-        ) : (
-          folderTemplate
-        )}
+          {folderTemplate}
+          {/* Folder ends here */}
+
+          {/* Recent Files start here */}
+          {!this.state.showingFolder ? (
+            <div>
+              <div className="main-container-header clearfix">
+                <div className="main-container-header-name float-left">
+                  <h2>Recent Files</h2>
+                </div>
+                <div className="main-container-header-view float-right">
+                  <Link to="#" className="folder-view-all">
+                    View All
+                  </Link>
+                </div>
+              </div>
+              <table className="recent-files-table">
+                <thead>
+                  <tr>
+                    <th>
+                      Name <AiOutlineArrowUp size={14} />
+                    </th>
+                    <th>Members</th>
+                    <th>Last Modified</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <img
+                        className="file-icon"
+                        src={zipIcon}
+                        alt="file icon"
+                      />
+                      React Media Files.zip
+                    </td>
+                    <td>Only you</td>
+                    <td>30 sept, 2019</td>
+                    <td>
+                      <MdMoreHoriz />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <img
+                        className="file-icon"
+                        src={docIcon}
+                        alt="file icon"
+                      />
+                      React Media Files.zip
+                    </td>
+                    <td>Only you</td>
+                    <td>30 sept, 2019</td>
+                    <td>
+                      <MdMoreHoriz />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <img
+                        className="file-icon"
+                        src={pdfIcon}
+                        alt="file icon"
+                      />
+                      React Media Files.zip
+                    </td>
+                    <td>Only you</td>
+                    <td>30 sept, 2019</td>
+                    <td>
+                      <MdMoreHoriz />
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              {/* Recent Files ends here */}
+            </div>
+          ) : (
+            folderTemplate
+          )}
+        </Router>
       </div>
     );
   }

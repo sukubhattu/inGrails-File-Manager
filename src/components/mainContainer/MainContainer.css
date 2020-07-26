@@ -27,8 +27,8 @@
 /* font family should be changed */
 form,
 input {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 12px;
+  font-family: SFPro;
+  font-size: 14px;
 }
 
 .card {
@@ -40,30 +40,78 @@ input {
 }
 
 .cloud-storage-card {
+  transition: transform 0.5s;
   margin-top: 20px;
-  border: 1px solid black;
   flex: 0 0 30%;
   background-color: white;
-  border: 1px solid #ccc;
-  padding: 20px 10px 30px 10px;
+  padding: 20px 10px 20px 10px;
   border-radius: 5px;
+}
+.cloud-storage-card img {
+  margin-bottom: 4px;
+  padding: 5px;
+}
+.cloud-storage-card:hover {
+  background-image: linear-gradient(to right, #757ffe, #5e69fe);
+  color: white;
+  cursor: pointer;
+  transform: scale(1.1);
+}
+.cloud-storage-card:hover .storage-progress-bar-individual {
+  background-color: white;
+}
+.cloud-storage-card:hover
+  .storage-progress-bar-individual
+  .storage-progress-bar-individual1 {
+  background-color: #fabc43;
+}
+.cloud-storage-card:hover img {
+  border-radius: 5px;
+  background-color: white;
+}
+.cloud-storage-card:hover
+  .cloud-storage-name
+  .float-right
+  .cloud-storage-name-value {
+  color: #ffffff;
+}
+.cloud-storage-name {
+  padding-bottom: 15px;
 }
 .cloud-storage-name-value {
   color: #b7bbd5;
 }
 
 .shared-folder-card {
+  transition: transform 0.5s;
   flex: 0 0 30%;
   background-color: white;
-  border: 1px solid #ccc;
   padding: 10px;
   border-radius: 5px;
 }
+
 .second-card {
   margin-left: 23px;
   margin-right: 23px;
 }
+.shared-folder-card-info-name p {
+  color: #878eb8;
+}
 
+.shared-folder-card:hover {
+  transform: scale(1.1);
+  background-image: linear-gradient(to right, #757ffe, #5e69fe);
+  cursor: pointer;
+}
+.shared-folder-card:hover p {
+  color: #ffffff;
+}
+.shared-folder-card:hover h4 {
+  color: #ffffff;
+}
+.shared-folder-card:hover i {
+  color: #fdbe00;
+}
 .shared-folder-card-info-name {
   color: #5864ff;
 }
@@ -80,6 +128,7 @@ input {
   table-layout: auto;
   width: 100%;
   border-collapse: collapse;
+  color: #6a74a8;
 }
 .recent-files-table th {
   padding: 10px 20px;
@@ -87,10 +136,16 @@ input {
 }
 
 .recent-files-table td {
+  transition: transform 0.5s;
   padding: 10px 20px;
+}
+/* The file name has different text color than other */
+.recent-files-table tbody tr td:first-child {
+  color: #0e1c71;
 }
 
 .recent-files-table tbody tr:hover td {
+  transform: scale(1.1);
   cursor: pointer;
   background-color: #ffffff;
 }
@@ -102,12 +157,21 @@ input {
   background-color: #f0f4fc;
   border-radius: 5px;
 }
-
+.storage-progress-bar-individual1 {
+  position: absolute;
+  height: 5px;
+  z-index: 1;
+  background-color: #6090f7;
+  width: 60%;
+  border-radius: 5px;
+}
 .folder-view-all {
+  color: #6570f7;
   border: none;
   outline: none;
 }
 
 .folder-view-all:hover {
+  font-weight: bold;
   cursor: pointer;
 }
