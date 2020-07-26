@@ -1,11 +1,11 @@
-@font-face {
+/* @font-face {
   font-family: "QBold";
   src: local("QBold"), url(./fonts/QaneleasBold.otf) format("truetype");
 }
 @font-face {
   font-family: "QLight";
   src: local("QLight"), url(./fonts/QaneleasLight.otf) format("truetype");
-}
+} */
 .App {
   max-width: 1200px;
   margin: 2px auto;
