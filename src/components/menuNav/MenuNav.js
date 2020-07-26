@@ -6,6 +6,9 @@ import "./MenuNav.css";
 // Import Image
 import logo from "./img/logo.png";
 
+// Import router
+import { BrowserRouter as Router, Link } from "react-router-dom";
+
 // importing icons
 import { MdContentCopy } from "react-icons/md";
 import { FiMessageSquare } from "react-icons/fi";
@@ -19,44 +22,49 @@ import { RiFileChartLine } from "react-icons/ri";
 function MenuNav() {
   return (
     <div className="menu-nav">
-      <div className="menu-nav-logo">
-        <img className="menu-nav-logo-img" src={logo} alt="user" />
-      </div>
-
-      <ul className="menu-nav-icons">
-        <li>
-          <a href="#" title="Copy">
-            <MdContentCopy size={24} />
-          </a>
-        </li>
-        <li>
-          <a href="#" title="Messages">
-            <FiMessageSquare size={24} />
-          </a>
-        </li>
-        <li>
-          <a href="#" title="Group">
-            <AiOutlineUser size={24} />
-          </a>
-        </li>
-        <li>
-          <a href="#" title="Chart">
-            <RiFileChartLine size={24} />
-          </a>
-        </li>
-        <li>
-          <a href="#" title="Setting">
-            <AiFillSetting size={24} />
-          </a>
-        </li>
-      </ul>
-      <div className="user-image">
-        <img
-          className="user-img-lg"
-          src="https://picsum.photos/40/40"
-          alt="user"
-        />
-      </div>
+      <Router>
+        <div className="menu-nav-logo">
+          <Link to="#">
+            <img className="menu-nav-logo-img" src={logo} alt="user" />
+          </Link>
+        </div>
+        <ul className="menu-nav-icons">
+          <li>
+            <Link to="#" title="Copy">
+              <MdContentCopy size={24} />
+            </Link>
+          </li>
+          <li>
+            <Link to="#" title="Messages">
+              <FiMessageSquare size={24} />
+            </Link>
+          </li>
+          <li>
+            <Link to="#" title="Group">
+              <AiOutlineUser size={24} />
+            </Link>
+          </li>
+          <li>
+            <Link to="#" title="Chart">
+              <RiFileChartLine size={24} />
+            </Link>
+          </li>
+          <li>
+            <Link to="#" title="Setting">
+              <AiFillSetting size={24} />
+            </Link>
+          </li>
+        </ul>
+        <div className="user-image">
+          <Link to="#">
+            <img
+              className="user-img-lg"
+              src="https://picsum.photos/40/40"
+              alt="user"
+            />
+          </Link>
+        </div>
+      </Router>
     </div>
   );
 }
