@@ -31,3 +31,6 @@
   border-radius: 50%;
   border: 2px solid white;
 }
+.user-img-lg:hover {
+  border: 2px solid #fdbe00;
+}
