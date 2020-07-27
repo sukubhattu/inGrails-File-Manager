@@ -45,7 +45,7 @@
   list-style: none;
   border-radius: 5px;
   background-color: #f6f8fb;
-  margin-top: 140px;
+  margin-top: 130px;
   margin-left: 20px;
   margin-right: 20px;
 }
@@ -69,13 +69,14 @@
   color: #afb5d1;
 }
 .create-new-button {
-  margin-top: 10px;
+  margin-top: 20px;
   background-color: #5864ff;
   color: #ffffff;
   padding: 15px 10px 15px 30px;
   border-radius: 5px;
   margin-left: 20px;
   margin-right: 20px;
+  font-size: 17px;
 }
 .create-new-button-plus {
   border-radius: 5px;
