@@ -23,7 +23,7 @@ const folderTemplate = (
   <div className="my-folder-view-all">
     <div className="card">
       <div className="shared-folder-card">
-        <div className="clearfix">
+        <div className="random-name clearfix">
           <div className="float-left">
             <i className="shared-folder-card-info-name">
               <FaFolder size={32} />
@@ -31,7 +31,15 @@ const folderTemplate = (
             <h4>Analytics</h4>
             <p>15 Files</p>
           </div>
-          <div className="shared-folder-card-info-people float-right"></div>
+          <div className="float-right">
+            <div className="shared-people-1">
+              <img
+                className="shared-people-img1"
+                src="https://picsum.photos/20/20"
+                alt="shared user"
+              />
+            </div>
+          </div>
         </div>
       </div>
       <div className="shared-folder-card second-card">
@@ -43,7 +51,15 @@ const folderTemplate = (
             <h4>Assets</h4>
             <p>345 Files</p>
           </div>
-          <div className="shared-folder-card-info-people float-right"></div>
+          <div className="float-right">
+            <div className="shared-people-1">
+              <img
+                className="shared-people-img1"
+                src="https://picsum.photos/20/20"
+                alt="shared user"
+              />
+            </div>
+          </div>
         </div>
       </div>
       <div className="shared-folder-card">
@@ -55,7 +71,22 @@ const folderTemplate = (
             <h4>Marketing</h4>
             <p>143 Files</p>
           </div>
-          <div className="shared-folder-card-info-people float-right"></div>
+          <div className="float-right">
+            <div className="shared-people-1">
+              <img
+                className="shared-people-img1"
+                src="https://picsum.photos/20/20"
+                alt="shared user"
+              />
+            </div>
+            <div className="shared-people-2">
+              <img
+                className="shared-people-img2"
+                src="https://picsum.photos/20/20"
+                alt="shared user"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </div>
