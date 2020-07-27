@@ -1,5 +1,5 @@
 
-![Image](![alt text](http://url/to/img.png))
+Click **[here](https://imgur.com/gallery/mr1NqBy)** for quick image preview.
 
 # **Any Kind of feedback is appreciated**
 
