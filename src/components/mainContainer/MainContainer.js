@@ -10,15 +10,16 @@ import { BrowserRouter as Router, Link } from "react-router-dom";
 import googleDrive from "./img/google-drive.png";
 import oneDrive from "./img/onedrive.png";
 import dropBox from "./img/dropbox.png";
-import pdfIcon from "./img/pdf.png";
-import zipIcon from "./img/zip-format.png";
-import docIcon from "./img/doc.png";
 
 // Import icons
 import { MdMoreHoriz } from "react-icons/md";
 import { AiOutlineArrowUp } from "react-icons/ai";
 import { FaFolder } from "react-icons/fa";
 
+// Import JSON
+import files from "./user-files";
+
+// Make a folder template for show all and hide all
 const folderTemplate = (
   <div>
     <div className="card">
@@ -120,6 +121,7 @@ class MainContainer extends Component {
             </form>
           </div>
           {/* search bar ends here */}
+
           {/* cloud storage card starts here */}
           <div className="card">
             <div className="cloud-storage-card">
@@ -143,7 +145,6 @@ class MainContainer extends Component {
                 <div className="storage-progress-bar-individual1"></div>
               </div>
             </div>
-            {/* second-card */}
             <div className="cloud-storage-card second-card">
               <div className="cloud-storage-name clearfix">
                 <div className="float-left">
@@ -188,6 +189,7 @@ class MainContainer extends Component {
             </div>
           </div>
           {/* cloud storage card ends here */}
+
           {/* Folder Starts Here */}
           <div className="main-container-header clearfix">
             <div className="main-container-header-name float-left">
@@ -205,6 +207,7 @@ class MainContainer extends Component {
           </div>
           {folderTemplate}
           {/* Folder ends here */}
+
           {/* Recent Files start here */}
           {!this.state.showingFolder ? (
             <div>
@@ -229,52 +232,26 @@ class MainContainer extends Component {
                     <th></th>
                   </tr>
                 </thead>
+                {/* Using user-files data to show repeated items */}
                 <tbody>
-                  <tr>
-                    <td>
-                      <img
-                        className="file-icon"
-                        src={zipIcon}
-                        alt="file icon"
-                      />
-                      React Media Files.zip
-                    </td>
-                    <td>Only you</td>
-                    <td>30 sept, 2019</td>
-                    <td>
-                      <MdMoreHoriz />
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <img
-                        className="file-icon"
-                        src={docIcon}
-                        alt="file icon"
-                      />
-                      React Media Files.zip
-                    </td>
-                    <td>Only you</td>
-                    <td>30 sept, 2019</td>
-                    <td>
-                      <MdMoreHoriz />
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <img
-                        className="file-icon"
-                        src={pdfIcon}
-                        alt="file icon"
-                      />
-                      React Media Files.zip
-                    </td>
-                    <td>Only you</td>
-                    <td>30 sept, 2019</td>
-                    <td>
-                      <MdMoreHoriz />
-                    </td>
-                  </tr>
+                  {files.map((file, index) => (
+                    <tr key={index}>
+                      <td>
+                        {" "}
+                        <img
+                          className="file-icon"
+                          src={file.icon}
+                          alt="file icon"
+                        />{" "}
+                        {file.name}
+                      </td>
+                      <td>{file.sharedWith}</td>
+                      <td>{file.date}</td>
+                      <td>
+                        <MdMoreHoriz />
+                      </td>
+                    </tr>
+                  ))}
                 </tbody>
               </table>
               {/* Recent Files ends here */}
@@ -282,18 +259,6 @@ class MainContainer extends Component {
           ) : (
             folderTemplate
           )}
-          {/* Live twitter feed */}
-          <div className="twitter-feed">
-            <a
-              className="twitter-timeline"
-              data-height="600px"
-              href="https://twitter.com/realpython"
-            >
-              Tweets by RealPython
-            </a>{" "}
-          </div>
-
-          {/* Live twitter feed ends here */}
         </Router>
       </div>
     );
