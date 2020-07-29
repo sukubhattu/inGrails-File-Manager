@@ -33,7 +33,10 @@ input {
   align-items: stretch;
   padding: 0px 20px;
 }
-
+.card > div:nth-child(2) {
+  margin-left: 2%;
+  margin-right: 2%;
+}
 .cloud-storage-card {
   transition: transform 0.3s;
   flex: 0 0 32%;
@@ -42,10 +45,7 @@ input {
   border-radius: 5px;
   margin-top: 20px;
 }
-.second-card {
-  margin-left: 2%;
-  margin-right: 2%;
-}
+
 .cloud-storage-card img {
   margin-bottom: 4px;
   padding: 5px;
@@ -175,7 +175,6 @@ input {
   height: 5px;
   z-index: 1;
   background-color: #6090f7;
-  width: 60%;
   border-radius: 5px;
 }
 .folder-view-all {
@@ -196,6 +195,10 @@ input {
 
 /* For smaller screen size */
 @media only screen and (max-width: 900px) {
+  .card > div:nth-child(2) {
+    margin-left: 0%;
+    margin-right: 0%;
+  }
   .cloud-storage-card {
     padding: 20px 30px;
     flex: 0 0 100%;
