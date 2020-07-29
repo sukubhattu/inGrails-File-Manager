@@ -2,6 +2,8 @@ body {
   background-color: #eff0fa;
   color: #0e1c71;
   font-family: SFPro;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 .float-left {
   float: left;
