@@ -31,12 +31,18 @@
   background-color: white;
 }
 
+/* Smaller mobile screen */
 @media only screen and (max-width: 640px) {
   .menu-nav-wrapper {
     display: none;
   }
+  .side-nav-wrapper {
+    min-width: 200px;
+    width: 25%;
+  }
   .main-container-wrapper {
-    width: 100%;
+    min-width: 355px;
+    width: 75%;
   }
   .storage-wrapper {
     display: none;
