@@ -20,7 +20,7 @@ import { AiOutlineArrowUp } from "react-icons/ai";
 import { FaFolder } from "react-icons/fa";
 
 const folderTemplate = (
-  <div className="my-folder-view-all">
+  <div>
     <div className="card">
       <div className="shared-folder-card">
         <div className="random-name clearfix">
@@ -120,7 +120,6 @@ class MainContainer extends Component {
             </form>
           </div>
           {/* search bar ends here */}
-
           {/* cloud storage card starts here */}
           <div className="card">
             <div className="cloud-storage-card">
@@ -137,17 +136,14 @@ class MainContainer extends Component {
                 </div>
               </div>
               <div className="cloud-storage-amount clearfix">
-                <div className="cloud-storage-amount-used float-left">
-                  45 GB
-                </div>
-                <div className="cloud-storage-amount-total float-right">
-                  50 GB
-                </div>
+                <p className="float-left">45 GB</p>
+                <p className="float-right">50 GB</p>
               </div>
               <div className="storage-progress-bar-individual">
                 <div className="storage-progress-bar-individual1"></div>
               </div>
             </div>
+            {/* second-card */}
             <div className="cloud-storage-card second-card">
               <div className="cloud-storage-name clearfix">
                 <div className="float-left">
@@ -162,12 +158,8 @@ class MainContainer extends Component {
                 </div>
               </div>
               <div className="cloud-storage-amount clearfix">
-                <div className="cloud-storage-amount-used float-left">
-                  45 GB
-                </div>
-                <div className="cloud-storage-amount-total float-right">
-                  50 GB
-                </div>
+                <p className="float-left">45 GB</p>
+                <p className="float-right">50 GB</p>
               </div>
               <div className="storage-progress-bar-individual">
                 <div className="storage-progress-bar-individual1"></div>
@@ -187,12 +179,8 @@ class MainContainer extends Component {
                 </div>
               </div>
               <div className="cloud-storage-amount clearfix">
-                <div className="cloud-storage-amount-used float-left">
-                  45 GB
-                </div>
-                <div className="cloud-storage-amount-total float-right">
-                  50 GB
-                </div>
+                <p className="float-left">45 GB</p>
+                <p className="float-right">50 GB</p>
               </div>
               <div className="storage-progress-bar-individual">
                 <div className="storage-progress-bar-individual1"></div>
@@ -200,7 +188,6 @@ class MainContainer extends Component {
             </div>
           </div>
           {/* cloud storage card ends here */}
-
           {/* Folder Starts Here */}
           <div className="main-container-header clearfix">
             <div className="main-container-header-name float-left">
@@ -218,7 +205,6 @@ class MainContainer extends Component {
           </div>
           {folderTemplate}
           {/* Folder ends here */}
-
           {/* Recent Files start here */}
           {!this.state.showingFolder ? (
             <div>
@@ -296,6 +282,18 @@ class MainContainer extends Component {
           ) : (
             folderTemplate
           )}
+          {/* Live twitter feed */}
+          <div className="twitter-feed">
+            <a
+              className="twitter-timeline"
+              data-height="600px"
+              href="https://twitter.com/realpython"
+            >
+              Tweets by RealPython
+            </a>{" "}
+          </div>
+
+          {/* Live twitter feed ends here */}
         </Router>
       </div>
     );
