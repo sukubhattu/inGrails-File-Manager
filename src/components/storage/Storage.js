@@ -3,7 +3,7 @@ import React from "react";
 // Import css
 import "./Storage.css";
 
-// Import JSON files
+// Import dummy storage data
 import storageFiles from "./storage-files";
 
 // Import image
