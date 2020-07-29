@@ -98,6 +98,7 @@
   border: 2px solid #d1d4f4;
   border-radius: 5px;
   margin: 60px 10px 0px 10px;
+  text-align: center;
 }
 .storage-upgrade img {
   padding: 2px;
@@ -105,17 +106,14 @@
 }
 .storage-upgrade h2 {
   color: #19249a;
-  text-align: center;
 }
 .storage-upgrade p {
   padding: 10px 2px;
   color: #535bb3;
-  text-align: center;
 }
 .storage-upgrade button {
   font-size: 17px;
   border: 1px solid #5864ff;
-  margin-left: 30%;
   margin-top: 10px;
   margin-bottom: 10px;
   border-radius: 5px;
