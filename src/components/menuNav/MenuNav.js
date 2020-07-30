@@ -20,24 +20,23 @@ import { RiFileChartLine } from "react-icons/ri";
   Further it can be changed
 */
 class MenuNav extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
+
     this.state = {
-      show: true,
+      active: this.props.buttonON,
     };
   }
+
+  handleSwitchOption = (event) => {
+    this.props.changeButtonFunction(!this.state.active);
+    this.setState({ active: !this.state.active });
+  };
+
   render() {
     return (
       <div className="menu-nav">
         <Router>
-          {this.state.show ? <h1>sh</h1> : null}
-          <button
-            onClick={() => {
-              this.setState({ show: !this.state.show });
-            }}
-          >
-            Click Me
-          </button>
           <div className="menu-nav-logo">
             <Link to="#">
               <img className="menu-nav-logo-img" src={logo} alt="user" />
@@ -70,6 +69,17 @@ class MenuNav extends Component {
               </Link>
             </li>
           </ul>
+          <div className="storage-toggler">
+            <label className="switch">
+              <input
+                type="checkbox"
+                checked={this.state.active}
+                onChange={this.handleSwitchOption}
+              />
+              <span className="slider round"></span>
+            </label>
+          </div>
+
           <div className="user-image">
             <Link to="#">
               <img
