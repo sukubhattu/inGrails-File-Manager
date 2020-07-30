@@ -26,9 +26,19 @@
   width: 50%;
   background-color: #f6f8fb;
 }
+
 .storage-wrapper {
   width: 23%;
   background-color: white;
+}
+
+.storage-wrapper-nodisplay {
+  display: none;
+}
+
+.main-container-wrapper-without-storage {
+  width: 73%;
+  background-color: #f6f8fb;
 }
 
 /* Smaller mobile screen */
@@ -53,6 +63,9 @@
     width: 100%;
   }
   .storage-wrapper {
+    display: none;
+  }
+  .storage-toggler {
     display: none;
   }
 }
