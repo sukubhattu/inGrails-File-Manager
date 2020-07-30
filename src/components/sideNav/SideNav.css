@@ -18,15 +18,25 @@
   list-style: none;
   margin-left: 20px;
 }
-.file-types h4 {
-  color: #6570f7;
-}
+
 .file-types-head {
+  font-size: 17px;
   padding: 10px 0px;
+}
+.file-types-head:hover {
+  cursor: pointer;
+}
+/* When the item is expanded its header should look different */
+.accordion__button[aria-expanded="true"] {
+  color: #6570f7;
+  font-weight: bold;
 }
 .file-types-sub {
   margin-left: 15px;
   list-style: none;
+}
+.file-types-sub:hover {
+  cursor: pointer;
 }
 .file-types-sub li {
   padding-top: 5px;
@@ -51,9 +61,11 @@
 }
 .create-new li:first-child {
   border-bottom: 2px solid #e7eafa;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 .create-new li {
-  padding: 5px 5px;
+  padding: 8px 15px;
 }
 .create-new li:hover {
   cursor: pointer;

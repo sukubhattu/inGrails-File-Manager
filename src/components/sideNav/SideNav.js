@@ -4,16 +4,22 @@ import React from "react";
 import "./SideNav.css";
 
 // Importing Icons
-import { RiArrowDropDownLine, RiSlideshow4Line } from "react-icons/ri";
+import { RiArrowDropDownLine } from "react-icons/ri";
 import { IoMdFolderOpen } from "react-icons/io";
+import { AiOutlineRight, AiFillCaretRight, AiFillFolder } from "react-icons/ai";
+import { BsPlus } from "react-icons/bs";
+
+// Import accordion
 import {
-  AiOutlineFileText,
-  AiOutlineRight,
-  AiFillCaretRight,
-  AiFillFolder,
-} from "react-icons/ai";
-import { BsFileSpreadsheet, BsPlus } from "react-icons/bs";
-import { FiMoreHorizontal } from "react-icons/fi";
+  Accordion,
+  AccordionItem,
+  AccordionItemButton,
+  AccordionItemPanel,
+} from "react-accessible-accordion";
+
+// Import dummy data
+import storageData from "./sidenav-data";
+import createNewData from "./sidenav-create-data";
 
 /* Leaving as stateful or class components
   Initially this code is just UI component.
@@ -33,65 +39,40 @@ function SideNav() {
           </div>
         </div>
       </div>
-
       <h2>Storage</h2>
-      <ul className="file-types">
-        <li>
-          <h4>My Files</h4>
-          <ul className="file-types-sub">
-            <li>
-              <i className="file-types-sub1">
-                <AiFillCaretRight />
-              </i>
-              <i className="file-types-sub2">
-                <AiFillFolder />
-              </i>
-              Analytics
-            </li>
-            <li>
-              <i className="file-types-sub1">
-                <AiFillCaretRight />
-              </i>
-              <i className="file-types-sub2">
-                <AiFillFolder />
-              </i>
-              Assets
-            </li>
-            <li>
-              <i className="file-types-sub1">
-                <AiFillCaretRight />
-              </i>
-              <i className="file-types-sub2">
-                <AiFillFolder />
-              </i>
-              Marketing
-            </li>
-            <li>
-              <i className="file-types-sub1">
-                <AiFillCaretRight />
-              </i>
-              <i className="file-types-sub2">
-                <AiFillFolder />
-              </i>
-              Templates
-            </li>
-            <li>
-              <i className="file-types-sub1">
-                <AiFillCaretRight />
-              </i>
-              <i className="file-types-sub2">
-                <AiFillFolder />
-              </i>
-              Projects
-            </li>
+      {/* 
+      allowZeroExpanded: On opening another accordion previous will get closed 
+      preExpanded: 1st one is expanded by default
+       */}
+      <Accordion allowZeroExpanded preExpanded={["a"]}>
+        {storageData.map((file, index) => (
+          <ul className="file-types" key={index}>
+            <AccordionItem uuid={file.uuid}>
+              <AccordionItemButton>
+                <li className="file-types-head">{file.name}</li>
+              </AccordionItemButton>
+              <AccordionItemPanel>
+                <ul className="file-types-sub">
+                  {file.subFolders.map((folder, index) => (
+                    <li>
+                      <i className="file-types-sub1">
+                        <AiFillCaretRight />
+                      </i>
+                      <i className="file-types-sub2">
+                        <AiFillFolder />
+                      </i>
+                      {folder}
+                    </li>
+                  ))}
+                </ul>
+              </AccordionItemPanel>
+            </AccordionItem>
           </ul>
-        </li>
-        <li className="file-types-head">Shared with me</li>
-        <li className="file-types-head">Recent</li>
-        <li className="file-types-head">Starred</li>
-        <li className="file-types-head">Trash</li>
-      </ul>
+        ))}
+      </Accordion>
+
       {/* for create new items */}
+
       <ul className="create-new">
         <li>
           <i className="create-new-item">
@@ -99,42 +80,17 @@ function SideNav() {
           </i>
           Folder
         </li>
-        <li>
-          <i className="create-new-item">
-            <AiOutlineFileText size={20} />
-          </i>
-          Text Doc
-          <i className="create-new-item-go">
-            <AiOutlineRight size={14} />
-          </i>
-        </li>
-        <li>
-          <i className="create-new-item">
-            <RiSlideshow4Line size={20} />
-          </i>
-          Presentation
-          <i className="create-new-item-go">
-            <AiOutlineRight size={14} />
-          </i>
-        </li>
-        <li>
-          <i className="create-new-item">
-            <BsFileSpreadsheet size={20} />
-          </i>
-          Slides
-          <i className="create-new-item-go">
-            <AiOutlineRight size={14} />
-          </i>
-        </li>
-        <li>
-          <i className="create-new-item">
-            <FiMoreHorizontal size={20} />
-          </i>
-          More
-          <i className="create-new-item-go">
-            <AiOutlineRight size={14} />
-          </i>
-        </li>
+        {createNewData.map((file, index) => (
+          <li key={index}>
+            <i className="create-new-item">
+              <file.icon size={20} />
+            </i>
+            {file.name}
+            <i className="create-new-item-go">
+              <AiOutlineRight size={14} />
+            </i>
+          </li>
+        ))}
       </ul>
       <div className="create-new-button">
         Create new
