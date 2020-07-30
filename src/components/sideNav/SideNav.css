@@ -26,6 +26,11 @@
 .file-types-head:hover {
   cursor: pointer;
 }
+/* When the item is expanded its header should look different */
+.accordion__button[aria-expanded="true"] {
+  color: #6570f7;
+  font-weight: bold;
+}
 .file-types-sub {
   margin-left: 15px;
   list-style: none;
