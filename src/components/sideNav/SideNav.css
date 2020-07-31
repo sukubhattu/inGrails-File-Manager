@@ -25,6 +25,7 @@
 }
 .file-types-head:hover {
   cursor: pointer;
+  font-weight: bold;
 }
 /* When the item is expanded its header should look different */
 .accordion__button[aria-expanded="true"] {
@@ -52,7 +53,7 @@
   margin-right: 5px;
 }
 .create-new {
-  margin-top: 50px;
+  margin-top: 20px;
   list-style: none;
   border-radius: 5px;
   background-color: #f6f8fb;
