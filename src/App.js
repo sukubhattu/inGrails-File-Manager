@@ -17,6 +17,11 @@ import MainContainer from "./components/mainContainer/MainContainer";
 import Storage from "./components/storage/Storage";
 
 class App extends Component {
+  /* 
+  This state and function is passed to child component MenuNav to toggle storage component 
+  Initially storage component is shown.
+  On toggle storage component is shown or hidden
+  */
   state = {
     buttonON: true,
   };
@@ -48,6 +53,7 @@ class App extends Component {
           </div>
 
           <div
+            // Depending on toggle value change css of main-container
             className={
               this.state.buttonON
                 ? "main-container-wrapper"
@@ -58,6 +64,7 @@ class App extends Component {
           </div>
 
           <div
+            // Depending on toggle value change css of storage-container
             className={
               this.state.buttonON
                 ? " storage-wrapper "

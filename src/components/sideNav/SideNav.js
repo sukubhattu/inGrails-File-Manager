@@ -18,24 +18,18 @@ import {
 } from "react-accessible-accordion";
 
 // Import dummy data
-import storageData from "./sidenav-data";
+import sideNavData from "./sidenav-data";
 import createNewData from "./sidenav-create-data";
 
-/* Leaving as stateful or class components
-  Initially this code is just UI component.
-  Further it can be changed
-*/
 class SideNav extends Component {
+  // This constructor handles show and hide option of create new button
   constructor() {
     super();
     this.state = {
       show: false,
     };
   }
-  handleSwitchOption = (event) => {
-    this.props.changeButtonFunction(!this.state.active);
-    this.setState({ active: !this.state.active });
-  };
+
   render() {
     return (
       <div className="side-nav">
@@ -56,7 +50,8 @@ class SideNav extends Component {
         preExpanded: 1st one is expanded by default
          */}
         <Accordion allowZeroExpanded preExpanded={["a"]}>
-          {storageData.map((file, index) => (
+          {/* Loop through  sidenav-data.js for accordion drop down like menu*/}
+          {sideNavData.map((file, index) => (
             <ul className="file-types" key={index}>
               <AccordionItem uuid={file.uuid}>
                 <AccordionItemButton>
@@ -83,7 +78,6 @@ class SideNav extends Component {
         </Accordion>
 
         {/* for create new items */}
-
         {this.state.show ? (
           <ul className="create-new">
             <li>
@@ -92,6 +86,7 @@ class SideNav extends Component {
               </i>
               Folder
             </li>
+            {/* Loop through sidenav-create-data */}
             {createNewData.map((file, index) => (
               <li key={index}>
                 <i className="create-new-item">

@@ -8,10 +8,12 @@ import storageFiles from "./storage-files";
 
 // Import image
 import upgrade1 from "./img/upgrade.png";
+
 /* Leaving as stateless or function component
   Initially this code is just UI component.
   Further it can be changed
 */
+
 function Storage() {
   return (
     <div className="storage">
@@ -35,6 +37,7 @@ function Storage() {
       </div>
 
       <div className="storage-category">
+        {/* Loop through storage-files.js data  */}
         {storageFiles.map((file, index) => (
           <div className="storage-category-row" key={index}>
             <div className="storage-category-icon">

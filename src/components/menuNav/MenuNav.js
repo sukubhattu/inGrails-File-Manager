@@ -15,11 +15,11 @@ import { FiMessageSquare } from "react-icons/fi";
 import { AiOutlineUser, AiFillSetting } from "react-icons/ai";
 import { RiFileChartLine } from "react-icons/ri";
 
-/* Leaving as stateless or function component
-  Initially this code is just UI component.
-  Further it can be changed
-*/
 class MenuNav extends Component {
+  /*
+  This constructor and handleSwitchOption handles storage toggle switch
+  The value is then passed to parent component i.e App.js
+  */
   constructor(props) {
     super(props);
 
@@ -69,6 +69,8 @@ class MenuNav extends Component {
               </Link>
             </li>
           </ul>
+
+          {/* On click the boolean value changes from true to false and vice versa */}
           <div className="storage-toggler">
             <label className="switch">
               <input

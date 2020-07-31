@@ -17,6 +17,11 @@ import cloudFiles from "./cloud-files";
 
 /* Making this component as class or stateful component for view all button demo purpose */
 class MainContainer extends Component {
+  /* 
+  This state toggles folder view all option 
+  Initially toggle is false
+  Onclick the value toggles between true and false
+  */
   state = {
     showingFolder: false,
   };
@@ -44,9 +49,9 @@ class MainContainer extends Component {
           {/* search bar ends here */}
 
           {/* cloud storage card starts here */}
-
           {/* 
             DYNAMIC card without hard coding for cloud storage
+            Loop through cloud-files.js dummy data to create a card
            */}
           <div className="card">
             {cloudFiles.map((file, index) => (
@@ -84,6 +89,7 @@ class MainContainer extends Component {
               <h2>Folders</h2>
             </div>
             <div className="main-container-header-view float-right">
+              {/* On click the toggler works here */}
               <Link
                 to="#"
                 className="folder-view-all"
@@ -120,7 +126,9 @@ class MainContainer extends Component {
                     <th></th>
                   </tr>
                 </thead>
-                {/* Using user-files data to show repeated items */}
+                {/* 
+                  Loop through user-file.js dummy data to create table
+                 */}
                 <tbody>
                   {files.map((file, index) => (
                     <tr key={index}>
