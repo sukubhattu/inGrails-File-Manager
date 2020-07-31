@@ -135,7 +135,7 @@ class MainContainer extends Component {
                       </td>
                       <td>{file.sharedWith}</td>
                       <td>{file.date}</td>
-                      <td>
+                      <td className="file-more">
                         <MdMoreHoriz />
                       </td>
                     </tr>
