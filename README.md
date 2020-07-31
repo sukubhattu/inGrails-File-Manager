@@ -1,3 +1,4 @@
+## Designed with love using CSS3 :heart:  ~~Bootstrap~~
 # Update 2.0 features
 1. Full screen mode
 2. Mobile responsive
