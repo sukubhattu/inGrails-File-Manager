@@ -50,7 +50,7 @@ class MainContainer extends Component {
            */}
           <div className="card">
             {cloudFiles.map((file, index) => (
-              <div className="cloud-storage-card">
+              <div className="cloud-storage-card" key={index}>
                 <div className="cloud-storage-name clearfix">
                   <div className="float-left">
                     <img src={file.icon} alt="Google Drive" />
@@ -135,7 +135,7 @@ class MainContainer extends Component {
                       </td>
                       <td>{file.sharedWith}</td>
                       <td>{file.date}</td>
-                      <td>
+                      <td className="file-more">
                         <MdMoreHoriz />
                       </td>
                     </tr>

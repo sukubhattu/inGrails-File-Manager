@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 
 // Importing CSS
 import "./MenuNav.css";
@@ -19,54 +19,80 @@ import { RiFileChartLine } from "react-icons/ri";
   Initially this code is just UI component.
   Further it can be changed
 */
-function MenuNav() {
-  return (
-    <div className="menu-nav">
-      <Router>
-        <div className="menu-nav-logo">
-          <Link to="#">
-            <img className="menu-nav-logo-img" src={logo} alt="user" />
-          </Link>
-        </div>
-        <ul className="menu-nav-icons">
-          <li>
-            <Link to="#" title="Copy">
-              <MdContentCopy size={24} />
+class MenuNav extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      active: this.props.buttonON,
+    };
+  }
+
+  handleSwitchOption = (event) => {
+    this.props.changeButtonFunction(!this.state.active);
+    this.setState({ active: !this.state.active });
+  };
+
+  render() {
+    return (
+      <div className="menu-nav">
+        <Router>
+          <div className="menu-nav-logo">
+            <Link to="#">
+              <img className="menu-nav-logo-img" src={logo} alt="user" />
             </Link>
-          </li>
-          <li>
-            <Link to="#" title="Messages">
-              <FiMessageSquare size={24} />
+          </div>
+          <ul className="menu-nav-icons">
+            <li>
+              <Link to="#" title="Copy">
+                <MdContentCopy size={24} />
+              </Link>
+            </li>
+            <li>
+              <Link to="#" title="Messages">
+                <FiMessageSquare size={24} />
+              </Link>
+            </li>
+            <li>
+              <Link to="#" title="Group">
+                <AiOutlineUser size={24} />
+              </Link>
+            </li>
+            <li>
+              <Link to="#" title="Chart">
+                <RiFileChartLine size={24} />
+              </Link>
+            </li>
+            <li>
+              <Link to="#" title="Setting">
+                <AiFillSetting size={24} />
+              </Link>
+            </li>
+          </ul>
+          <div className="storage-toggler">
+            <label className="switch">
+              <input
+                type="checkbox"
+                checked={this.state.active}
+                onChange={this.handleSwitchOption}
+              />
+              <span className="slider round"></span>
+            </label>
+          </div>
+
+          <div className="user-image">
+            <Link to="#">
+              <img
+                className="user-img-lg"
+                src="https://picsum.photos/40/40"
+                alt="user"
+              />
             </Link>
-          </li>
-          <li>
-            <Link to="#" title="Group">
-              <AiOutlineUser size={24} />
-            </Link>
-          </li>
-          <li>
-            <Link to="#" title="Chart">
-              <RiFileChartLine size={24} />
-            </Link>
-          </li>
-          <li>
-            <Link to="#" title="Setting">
-              <AiFillSetting size={24} />
-            </Link>
-          </li>
-        </ul>
-        <div className="user-image">
-          <Link to="#">
-            <img
-              className="user-img-lg"
-              src="https://picsum.photos/40/40"
-              alt="user"
-            />
-          </Link>
-        </div>
-      </Router>
-    </div>
-  );
+          </div>
+        </Router>
+      </div>
+    );
+  }
 }
 
 export default MenuNav;

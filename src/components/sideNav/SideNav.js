@@ -32,6 +32,10 @@ class SideNav extends Component {
       show: false,
     };
   }
+  handleSwitchOption = (event) => {
+    this.props.changeButtonFunction(!this.state.active);
+    this.setState({ active: !this.state.active });
+  };
   render() {
     return (
       <div className="side-nav">
@@ -61,7 +65,7 @@ class SideNav extends Component {
                 <AccordionItemPanel>
                   <ul className="file-types-sub">
                     {file.subFolders.map((folder, index) => (
-                      <li>
+                      <li key={index}>
                         <i className="file-types-sub1">
                           <AiFillCaretRight />
                         </i>
@@ -101,7 +105,7 @@ class SideNav extends Component {
             ))}
           </ul>
         ) : (
-          <div style={{ height: 266 + "px" }}></div>
+          <div style={{ height: 236 + "px" }}></div>
         )}
         <div
           className="create-new-button"

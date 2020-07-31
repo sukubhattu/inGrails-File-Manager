@@ -59,13 +59,15 @@
   margin: 15px 20px;
 }
 .storage-category-row {
-  transition: transform 0.3s;
+  transition: transform 0.1s;
+  -webkit-transition: transform 0.1s;
+  -ms-transition: transform 0.1s;
   display: flex;
   flex-direction: row;
   padding: 10px 0px;
 }
 .storage-category-row:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
   cursor: pointer;
   background-color: #ffffff;
   border-radius: 8px;

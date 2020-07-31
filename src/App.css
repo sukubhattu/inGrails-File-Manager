@@ -4,7 +4,6 @@
 }
 .App {
   max-width: 100%;
-  margin: 2px auto;
 }
 .main-wrapper {
   display: flex;
@@ -26,9 +25,19 @@
   width: 50%;
   background-color: #f6f8fb;
 }
+
 .storage-wrapper {
   width: 23%;
   background-color: white;
+}
+
+.storage-wrapper-nodisplay {
+  display: none;
+}
+
+.main-container-wrapper-without-storage {
+  width: 73%;
+  background-color: #f6f8fb;
 }
 
 /* Smaller mobile screen */
@@ -42,17 +51,30 @@
   }
   .main-container-wrapper {
     min-width: 355px;
-    width: 75%;
+    width: 100%;
   }
   .storage-wrapper {
     display: none;
   }
+  /* Hide table icons in mobile view */
+  .file-icon {
+    display: none;
+  }
+  .file-more {
+    display: none;
+  }
 }
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 900px) {
+  .side-nav-wrapper {
+    width: 25%;
+  }
   .main-container-wrapper {
     width: 100%;
   }
   .storage-wrapper {
+    display: none;
+  }
+  .storage-toggler {
     display: none;
   }
 }
